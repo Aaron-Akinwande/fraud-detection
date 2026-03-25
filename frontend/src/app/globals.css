@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Syne', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background-color: #080B0F;
+  color: #E6EDF3;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080B0F; }
+::-webkit-scrollbar-thumb { background: #1C2333; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #388BFD; }
+
+/* Scanline overlay for cyberpunk feel */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(28, 35, 51, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 35, 51, 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow effects */
+.glow-red    { box-shadow: 0 0 20px rgba(248, 81, 73, 0.15); }
+.glow-green  { box-shadow: 0 0 20px rgba(63, 185, 80, 0.15); }
+.glow-blue   { box-shadow: 0 0 20px rgba(56, 139, 253, 0.15); }
+.glow-yellow { box-shadow: 0 0 20px rgba(210, 153, 34, 0.15); }
+
+/* Text glow */
+.text-glow-red  { text-shadow: 0 0 20px rgba(248, 81, 73, 0.6); }
+.text-glow-green { text-shadow: 0 0 20px rgba(63, 185, 80, 0.6); }
+
+/* Animated border */
+@keyframes borderPulse {
+  0%, 100% { border-color: rgba(248, 81, 73, 0.3); }
+  50%       { border-color: rgba(248, 81, 73, 0.8); }
+}
+.border-pulse { animation: borderPulse 2s ease-in-out infinite; }
+
+/* Number ticker */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.count-up { animation: countUp 0.5s ease forwards; }
+
+/* Tag blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.blink { animation: blink 1.2s ease-in-out infinite; }

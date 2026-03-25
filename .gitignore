@@ -1,0 +1,130 @@
+# ── Python / Backend ─────────────────────────────────────────────────────────
+
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# ── ML Model files ───────────────────────────────────────────────────────────
+
+# Trained model binaries (large files — regenerate with train.py)
+backend/model/fraud_model.pkl
+backend/model/model_meta.pkl
+
+# ── Dataset ──────────────────────────────────────────────────────────────────
+
+# Raw data files (too large for git — download from Kaggle)
+backend/data/*.csv
+backend/data/*.xlsx
+backend/data/*.json
+backend/data/*.parquet
+
+# ── Transaction log ──────────────────────────────────────────────────────────
+
+# Auto-generated at runtime
+backend/transactions.json
+
+# ── Environment variables ────────────────────────────────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# ── Next.js / Frontend ───────────────────────────────────────────────────────
+
+# Build output
+frontend/.next/
+frontend/out/
+
+# Dependencies
+frontend/node_modules/
+
+# Next.js cache
+frontend/.next/cache/
+
+# Typescript build info
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# ── Node general ─────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ── Editor / IDE ─────────────────────────────────────────────────────────────
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (PyCharm, WebStorm)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+
+# Logs
+*.log
+logs/
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# Downloaded results from batch analysis
+fraud_results_*.csv
