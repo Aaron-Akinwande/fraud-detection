@@ -7,6 +7,7 @@ const nav = [
   { href: "/", label: "Overview", icon: "◈" },
   { href: "/submit", label: "Check Transaction", icon: "⬡" },
   { href: "/batch", label: "Batch Analysis", icon: "⊞" },
+  { href: "/cards", label: "Card Profiles", icon: "▣" },
   { href: "/transactions", label: "Transaction Log", icon: "≡" },
 ];
 
@@ -43,7 +44,8 @@ export default function Sidebar() {
       {/* Nav */}
       <nav className="flex-1 px-3 py-4 space-y-1">
         {nav.map(({ href, label, icon }) => {
-          const active = path === href;
+          const active =
+            path === href || (path.startsWith(href + "/") && href !== "/");
           return (
             <Link
               key={href}
