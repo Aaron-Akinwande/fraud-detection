@@ -71,7 +71,7 @@ npm --version       # Should print 9.x or higher
 
 Download the dataset from Kaggle and place it in the `backend/data/` folder:
 
-1. Go to the dataset URL and sign in with a free Kaggle account
+1. Go to the dataset URL and sign in with a free Kaggle account: https://www.kaggle.com/datasets/kartik2112/fraud-detection?select=fraudTest.csv
 2. Click **Download**
 3. Unzip the file
 4. Rename the CSV to `card_transdata.csv` if needed
