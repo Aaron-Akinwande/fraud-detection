@@ -48,7 +48,7 @@ app = FastAPI(title="Fraud Detection API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "*","https://fraudWatch.vercel.app"],
+    allow_origins=["http://localhost:3000", "*","https://419-watch.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

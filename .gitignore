@@ -30,8 +30,8 @@ htmlcov/
 # ── ML Model files ───────────────────────────────────────────────────────────
 
 # Trained model binaries (large files — regenerate with train.py)
-backend/model/fraud_model.pkl
-backend/model/model_meta.pkl
+# backend/model/fraud_model.pkl
+# backend/model/model_meta.pkl
 
 # ── Dataset ──────────────────────────────────────────────────────────────────
 
