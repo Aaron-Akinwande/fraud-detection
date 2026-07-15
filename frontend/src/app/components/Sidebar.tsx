@@ -19,7 +19,10 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="px-5 py-6 border-b border-border">
         <div className="flex items-center gap-2">
-          <span className="text-red text-xl">⬡</span>
+          {/* <span className="text-red text-xl">⬡</span> */}
+          <div>
+            <img src="./favicon.png" alt="" />
+          </div>
           <div>
             <p className="font-sans font-800 text-text text-sm tracking-widest uppercase">
               FraudWatch
